@@ -8,7 +8,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .window {
+      width: calc(25% - 1rem); /* Adjust width to fit five windows */
+      margin-bottom: 1rem;
+    }
+    .window-titlebar {
+      background-color: #f0f0f0;
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .window-media {
+      background-color: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+    .window-body {
+      padding: 0.5rem;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+    }
+    .buy-btn {
+      display: block;
+      width: 100%;
+      background-color: #007bff;
+      color: #fff;
+      padding: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 0.25rem;
+    }
+    .buy-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -81,20 +120,29 @@
             <img src="images/hardware1.png" alt="Required hardware bundle">
           </div>
         </article>
+        <article class="window">
+          <div class="window-titlebar">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <span>Support and Services</span>
+          </div>
+          <div class="window-media">
+            <img src="images/support.png" alt="Support and services for X2 Smartcard Allinone">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
+      <div class="showcase products">
         <article class="window">
           <div class="window-titlebar">
             <div class="window-dots"><span></span><span></span><span></span></div>
             <span>X2 SmartCard Allinone</span>
           </div>
-          <div class="window-body">
-            <h3>X2 SmartCard Allinone Software</h3>
-            <p>
-              Official 2026 EMV Chip Formatting and Smartcard Management software. Full support for multi-brand card authentication, ARQC generation, personalisation, application loading and professional laboratory workflows.
-            </p>
-            <span class="price-highlight">$399 USD</span>
-            <p class="pay-note">Payment accepted in Bitcoin or Solana (SOL)</p>
-            <a href="payment-x2.html" class="buy-btn">Buy Now</a>
+          <div class="window-media">
+            <img src="images/x2-screenshot.png" alt="X2 SmartCard Allinone software">
           </div>
         </article>
         <article class="window">
@@ -102,20 +150,8 @@
             <div class="window-dots"><span></span><span></span><span></span></div>
             <span>Additional Software</span>
           </div>
-          <div class="window-body">
-            <h3>Essential Companion Tools</h3>
-            <p>Complete package of required supporting software for X2 SmartCard Allinone:</p>
-            <ul>
-              <li>2026 ATR Tool</li>
-              <li>2026 JCOP English</li>
-              <li>2026 JCOP Manager</li>
-              <li>MSRX</li>
-              <li>and more…</li>
-            </ul>
-            <p>IST files included (1000s)</p>
-            <span class="price-highlight">$299 USD</span>
-            <p class="pay-note">Payment accepted in Bitcoin or Solana (SOL)</p>
-            <a href="payment-addons.html" class="buy-btn">Buy Now</a>
+          <div class="window-media">
+            <img src="images/programs.png" alt="Companion software for X2 Smartcard Allinone">
           </div>
         </article>
         <article class="window">
@@ -123,14 +159,8 @@
             <div class="window-dots"><span></span><span></span><span></span></div>
             <span>Tutorial On How to Use</span>
           </div>
-          <div class="window-body">
-            <h3>Complete Software Tutorials</h3>
-            <p>
-              Full video guides covering exactly how to use all of the software. Step-by-step walkthroughs for EMV card formatting, personalisation, testing workflows and laboratory procedures.
-            </p>
-            <span class="price-highlight">$99 USD</span>
-            <p class="pay-note">Payment accepted in Bitcoin or Solana (SOL)</p>
-            <a href="payment.html" class="buy-btn">Buy Now</a>
+          <div class="window-media">
+            <img src="images/tutorialvideo.png" alt="Tutorial on how to use X2 Smartcard Allinone">
           </div>
         </article>
         <article class="window">
@@ -138,39 +168,10 @@
             <div class="window-dots"><span></span><span></span><span></span></div>
             <span>Hardware Needed</span>
           </div>
-          <div class="window-body">
-            <h3>Required Hardware Bundle</h3>
-            <p>Complete set of laboratory hardware required to work with X2 SmartCard Allinone and the additional tools:</p>
-            <ul>
-              <li>MSXR Magnetic Card Reader/Writer</li>
-              <li>Omnikey Smart Card Reader</li>
-              <li>10× Blank JCOP Unfused Cards</li>
-            </ul>
-            <span class="price-highlight">$199 USD</span>
-            <p class="pay-note">Payment accepted in Bitcoin or Solana (SOL)</p>
-            <a href="payment-hardware.html" class="buy-btn">Buy Now</a>
+          <div class="window-media">
+            <img src="images/hardware1.png" alt="Required hardware bundle">
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="software.html">Software</a>
-          <a href="hardware.html">Hardware</a>
-          <a href="products.html">Products</a>
-          <a href="faq.html">FAQ</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <p class="footer-copy">© 2026 X2 Smartcard Allinone. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <script src="js/main.js"></script>
-</body>
-</html>
+        <article class="window">
+          <div class="window-titlebar">
+            <div class="window-dots"><span></span><span></span><span></span></div>
