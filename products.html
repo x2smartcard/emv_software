@@ -3,51 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products — X2 Smartcard Allinone</title>
-  <meta name="description" content="X2 SmartCard Allinone software, companion tools, tutorials and laboratory hardware.">
+  <title>Hardware — X2 Smartcard Allinone</title>
+  <meta name="description" content="Laboratory hardware for EMV smartcard work: Omnikey readers, Deftun writer and JCOP unfused blank cards.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    .showcase {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .window {
-      width: calc(25% - 1rem); /* Adjust width to fit five windows */
-      margin-bottom: 1rem;
-    }
-    .window-titlebar {
-      background-color: #f0f0f0;
-      padding: 0.5rem;
-      border-bottom: 1px solid #ddd;
-    }
-    .window-media {
-      background-color: #fff;
-      padding: 1rem;
-      border: 1px solid #ddd;
-    }
-    .window-body {
-      padding: 0.5rem;
-      background-color: #f9f9f9;
-      border-top: 1px solid #ddd;
-    }
-    .buy-btn {
-      display: block;
-      width: 100%;
-      background-color: #007bff;
-      color: #fff;
-      padding: 0.5rem;
-      text-align: center;
-      text-decoration: none;
-      border: none;
-      border-radius: 0.25rem;
-    }
-    .buy-btn:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="header">
@@ -58,8 +19,8 @@
       <nav class="nav" id="mainNav">
         <a href="index.html">Home</a>
         <a href="software.html">Software</a>
-        <a href="hardware.html">Hardware</a>
-        <a href="products.html" class="active">Products</a>
+        <a href="hardware.html" class="active">Hardware</a>
+        <a href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -73,105 +34,108 @@
 
   <section class="page-header">
     <div class="container">
-      <p class="eyebrow">Catalogue</p>
-      <h1>Products</h1>
+      <p class="eyebrow">Hardware</p>
+      <h1>Hardware</h1>
       <p class="lead">
-        Product range and solutions for EMV smartcard development, testing and laboratory environments.
+        Physical interfaces, readers, terminals, and the laboratory equipment used in formal evaluation and certification processes.
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="showcase products">
+      <div class="showcase">
         <article class="window">
           <div class="window-titlebar">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>X2 SmartCard Allinone</span>
+            <span>Omnikey</span>
           </div>
           <div class="window-media">
-            <img src="images/x2-screenshot.png" alt="X2 SmartCard Allinone software">
+            <img src="images/Omnikey1.png" alt="HID Omnikey smart card reader">
           </div>
         </article>
+
         <article class="window">
           <div class="window-titlebar">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>Additional Software</span>
+            <span>Card Reader/Writer</span>
           </div>
           <div class="window-media">
-            <img src="images/programs.png" alt="Companion software for X2 Smartcard Allinone">
+            <img src="images/deftun.png" alt="Deftun magnetic card reader/writer">
           </div>
         </article>
+
         <article class="window">
           <div class="window-titlebar">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>Tutorial On How to Use</span>
+            <span>JCOP Unfused Blank Cards</span>
           </div>
           <div class="window-media">
-            <img src="images/tutorialvideo.png" alt="Tutorial on how to use X2 Smartcard Allinone">
+            <img src="images/jcop_unfused.png" alt="JCOP unfused blank cards">
           </div>
         </article>
+
         <article class="window">
           <div class="window-titlebar">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>Hardware Needed</span>
+            <span>Omnikey</span>
           </div>
-          <div class="window-media">
-            <img src="images/hardware1.png" alt="Required hardware bundle">
+          <div class="window-body">
+            <h3>Smart Card Reader</h3>
+            <p>
+              Omnikey readers (HID Global) are widely used contact and contactless smart card interfaces in EMV testing and laboratory environments. They provide reliable PC/SC connectivity for card personalization, application loading, transaction simulation, and formal evaluation of payment acceptance systems.
+            </p>
+            <span class="window-tag">Reader</span>
           </div>
         </article>
+
         <article class="window">
           <div class="window-titlebar">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>Support and Services</span>
+            <span>Card Reader/Writer</span>
           </div>
-          <div class="window-media">
-            <img src="images/support.png" alt="Support and services for X2 Smartcard Allinone">
+          <div class="window-body">
+            <h3>Deftun USB Reader/Writer</h3>
+            <p>
+              Compact USB card reader/writer used for contact card operations. Supports reading and writing of EMV, Java Card and ISO 7816 compliant cards. Frequently employed in development, personalization and laboratory testing setups due to its simplicity and PC/SC compatibility.
+            </p>
+            <span class="window-tag">Reader / Writer</span>
+          </div>
+        </article>
+
+        <article class="window">
+          <div class="window-titlebar">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <span>JCOP Unfused Blank Cards</span>
+          </div>
+          <div class="window-body">
+            <h3>JCOP Unfused Blank Cards</h3>
+            <p>
+              Unfused JCOP (Java Card Open Platform) blank cards are essential for development, personalization and laboratory testing of EMV payment applications. These cards provide control over the card operating system and application loading prior to final fusing.
+            </p>
+            <span class="window-tag">Blank Cards</span>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <footer class="footer">
     <div class="container">
-      <div class="showcase products">
-        <article class="window">
-          <div class="window-titlebar">
-            <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>X2 SmartCard Allinone</span>
-          </div>
-          <div class="window-media">
-            <img src="images/x2-screenshot.png" alt="X2 SmartCard Allinone software">
-          </div>
-        </article>
-        <article class="window">
-          <div class="window-titlebar">
-            <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>Additional Software</span>
-          </div>
-          <div class="window-media">
-            <img src="images/programs.png" alt="Companion software for X2 Smartcard Allinone">
-          </div>
-        </article>
-        <article class="window">
-          <div class="window-titlebar">
-            <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>Tutorial On How to Use</span>
-          </div>
-          <div class="window-media">
-            <img src="images/tutorialvideo.png" alt="Tutorial on how to use X2 Smartcard Allinone">
-          </div>
-        </article>
-        <article class="window">
-          <div class="window-titlebar">
-            <div class="window-dots"><span></span><span></span><span></span></div>
-            <span>Hardware Needed</span>
-          </div>
-          <div class="window-media">
-            <img src="images/hardware1.png" alt="Required hardware bundle">
-          </div>
-        </article>
-        <article class="window">
-          <div class="window-titlebar">
-            <div class="window-dots"><span></span><span></span><span></span></div>
+      <div class="footer-inner">
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="software.html">Software</a>
+          <a href="hardware.html">Hardware</a>
+          <a href="products.html">Products</a>
+          <a href="faq.html">FAQ</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <p class="footer-copy">© 2026 X2 Smartcard Allinone. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
