@@ -1,1 +1,9 @@
-
+<article class="window">
+  <div class="window-titlebar">
+    <div class="window-dots"><span></span><span></span><span></span></div>
+    <span>Package Deal</span>
+  </div>
+  <div class="window-media">
+    <img src="images/package-deal-laptop.jpg" alt="Virtual Machine Package Deal">
+  </div>
+</article>
