@@ -7,8 +7,60 @@
   <meta name="description" content="Contact X2 Smartcard Allinone.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --bg: #FFFFFF;
+      --surface: #F8FAFC;
+      --text: #0F172A;
+      --text-secondary: #475569;
+      --border: #E2E8F0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    .container { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+    .header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+    .logo img { height: 42px; }
+    .nav { display: flex; gap: 32px; }
+    .nav a { text-decoration: none; color: var(--text-secondary); font-weight: 500; font-size: 15px; }
+    .nav a:hover, .nav a.active { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--primary); margin: 5px 0; }
+    .page-header { padding: 100px 0 60px; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); text-align: center; }
+    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    h1 { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
+    .lead { font-size: 18px; color: var(--text-secondary); }
+    .section { padding: 40px 0 100px; }
+    .contact-form { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 40px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; font-weight: 500; margin-bottom: 8px; font-size: 14px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 14px 16px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 15px; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .form-group textarea { min-height: 140px; resize: vertical; }
+    .btn { display: inline-block; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 15px; cursor: pointer; transition: background 0.2s; width: 100%; }
+    .btn:hover { background: var(--accent-hover); }
+    .footer { background: #0F172A; color: #94A3B8; padding: 56px 0 40px; }
+    .footer-inner { text-align: center; max-width: 1200px; margin: 0 auto; }
+    .footer-nav { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+    .footer-nav a { color: #CBD5E1; text-decoration: none; font-size: 14px; }
+    .footer-nav a:hover { color: #fff; }
+    .footer-copy { font-size: 14px; }
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .menu-toggle { display: block; }
+      h1 { font-size: 36px; }
+      .contact-form { padding: 28px; }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -32,7 +84,6 @@
       </button>
     </div>
   </header>
-
   <section class="page-header">
     <div class="container">
       <p class="eyebrow">Support</p>
@@ -40,7 +91,6 @@
       <p class="lead">Send a message.</p>
     </div>
   </section>
-
   <section class="section">
     <div class="container">
       <form class="contact-form" action="#" method="post" onsubmit="return handleSubmit(event)">
@@ -66,11 +116,10 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </div>
   </section>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -88,7 +137,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
   <script>
     function handleSubmit(e) {
