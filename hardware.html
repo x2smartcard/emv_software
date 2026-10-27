@@ -7,8 +7,61 @@
   <meta name="description" content="Laboratory hardware for EMV smartcard work: Omnikey readers, Deftun writer and JCOP unfused blank cards.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #2563EB;
+      --bg: #FFFFFF;
+      --surface: #F8FAFC;
+      --text: #0F172A;
+      --text-secondary: #475569;
+      --border: #E2E8F0;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo img { height: 42px; }
+    .nav { display: flex; gap: 32px; }
+    .nav a { text-decoration: none; color: var(--text-secondary); font-weight: 500; font-size: 15px; }
+    .nav a:hover, .nav a.active { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--primary); margin: 5px 0; }
+    .page-header { padding: 100px 0 60px; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); text-align: center; }
+    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    h1 { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
+    .lead { font-size: 18px; color: var(--text-secondary); max-width: 700px; margin: 0 auto; }
+    .section { padding: 60px 0 100px; }
+    .showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+    .window { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .window-titlebar { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: #F8FAFC; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+    .window-dots { display: flex; gap: 6px; }
+    .window-dots span { width: 10px; height: 10px; border-radius: 50%; background: #CBD5E1; }
+    .window-dots span:nth-child(1) { background: #FF5F57; }
+    .window-dots span:nth-child(2) { background: #FEBC2E; }
+    .window-dots span:nth-child(3) { background: #28C840; }
+    .window-media { padding: 24px; text-align: center; background: #FAFBFC; }
+    .window-media img { max-width: 100%; height: auto; border-radius: 8px; }
+    .window-body { padding: 28px; }
+    .window-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .window-body p { color: var(--text-secondary); margin-bottom: 16px; }
+    .window-tag { display: inline-block; background: #EFF6FF; color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+    .footer { background: #0F172A; color: #94A3B8; padding: 56px 0 40px; }
+    .footer-inner { text-align: center; }
+    .footer-nav { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+    .footer-nav a { color: #CBD5E1; text-decoration: none; font-size: 14px; }
+    .footer-nav a:hover { color: #fff; }
+    .footer-copy { font-size: 14px; }
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .menu-toggle { display: block; }
+      h1 { font-size: 36px; }
+      .showcase { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -32,7 +85,6 @@
       </button>
     </div>
   </header>
-
   <section class="page-header">
     <div class="container">
       <p class="eyebrow">Hardware</p>
@@ -42,7 +94,6 @@
       </p>
     </div>
   </section>
-
   <section class="section">
     <div class="container">
       <div class="showcase">
@@ -115,7 +166,6 @@
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -133,7 +183,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
