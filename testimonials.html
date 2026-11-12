@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testimonials | X2 EMV Smartcard Allinone</title>
-  <meta name="description" content="Anonymous feedback from X2 Smartcard Allinone users.">
+  <title>Tutorials | X2 Smartcard Allinone</title>
+  <meta name="description" content="Explore X2 Smartcard Allinone tutorials, guides, and learning resources for smartcard management workflows.">
   <meta name="theme-color" content="#0B1220">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,8 +169,7 @@
     .page-hero {
       position: relative;
       overflow: hidden;
-      padding: 96px 0 82px;
-      text-align: center;
+      padding: 108px 0 96px;
       background:
         radial-gradient(900px 480px at 78% 0%, rgba(37, 99, 235, .13), transparent 62%),
         radial-gradient(760px 420px at 10% 100%, rgba(37, 99, 235, .08), transparent 60%),
@@ -191,8 +190,9 @@
 
     .page-hero-inner {
       position: relative;
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .eyebrow {
@@ -200,7 +200,7 @@
       align-items: center;
       gap: 10px;
       padding: 8px 16px;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
       border: 1px solid rgba(37, 99, 235, .18);
       border-radius: 999px;
       background: rgba(255, 255, 255, .78);
@@ -222,35 +222,123 @@
     }
 
     .page-hero h1 {
-      font-size: clamp(2.3rem, 5.2vw, 3.65rem);
-      line-height: 1.08;
-      letter-spacing: -.04em;
+      font-size: clamp(2.4rem, 5.6vw, 4.15rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
       font-weight: 800;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
-    .page-hero p {
-      max-width: 640px;
-      margin: 0 auto;
+    .page-hero h1 span {
+      display: block;
+      background: linear-gradient(92deg, var(--blue), #4F46E5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      max-width: 690px;
+      margin: 0 auto 38px;
       color: var(--muted);
-      font-size: clamp(1.03rem, 2.2vw, 1.18rem);
+      font-size: clamp(1.03rem, 2.2vw, 1.2rem);
     }
 
-    /* Testimonials */
-    .testimonials-section {
-      padding: 88px 0 96px;
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
-    .testimonial-grid {
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 28px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 650;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      box-shadow: 0 14px 28px rgba(37, 99, 235, .24);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(37, 99, 235, .3);
+    }
+
+    .btn-outline {
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(37, 99, 235, .35);
+      color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+    .section {
+      padding: 92px 0;
+    }
+
+    .section-accent {
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--blue);
+      font-size: 12.5px;
+      font-weight: 750;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.9rem, 4vw, 2.65rem);
+      line-height: 1.15;
+      letter-spacing: -.032em;
+      font-weight: 750;
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 16.5px;
+    }
+
+    /* Tutorial cards */
+    .tutorial-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
-    .testimonial-card {
+    .tutorial-card {
       display: flex;
       flex-direction: column;
-      padding: 32px 28px;
+      overflow: hidden;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       background: #fff;
@@ -258,69 +346,135 @@
       transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
 
-    .testimonial-card:hover {
+    .tutorial-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(37, 99, 235, .22);
+      box-shadow: 0 22px 48px rgba(15, 23, 42, .12);
+    }
+
+    .tutorial-media {
+      position: relative;
+      overflow: hidden;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tutorial-media img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+
+    .tutorial-card:hover .tutorial-media img {
+      transform: scale(1.035);
+    }
+
+    .tutorial-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .92);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tutorial-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 24px;
+    }
+
+    .tutorial-body h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -.015em;
+    }
+
+    .tutorial-body p {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-bottom: 22px;
+    }
+
+    .tutorial-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: auto;
+      color: var(--blue);
+      font-size: 14.5px;
+      font-weight: 650;
+    }
+
+    .tutorial-link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform .2s ease;
+    }
+
+    .tutorial-link:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* Learning path */
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .path-card {
+      padding: 30px 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .path-card:hover {
       transform: translateY(-4px);
       border-color: rgba(37, 99, 235, .24);
       box-shadow: 0 20px 44px rgba(15, 23, 42, .1);
     }
 
-    .testimonial-avatar {
-      width: 64px;
-      height: 64px;
-      margin-bottom: 22px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--blue-light);
-    }
-
-    .quote-mark {
-      width: 42px;
-      height: 42px;
+    .path-number {
       display: grid;
       place-items: center;
+      width: 44px;
+      height: 44px;
       margin-bottom: 20px;
-      border-radius: 14px;
+      border-radius: 12px;
       background: var(--blue-light);
       color: var(--blue);
+      font-size: 17px;
+      font-weight: 800;
     }
 
-    .quote-mark svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .testimonial-text {
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 26px;
-    }
-
-    .testimonial-footer {
-      margin-top: auto;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-    }
-
-    .testimonial-name {
-      display: block;
-      color: var(--ink);
-      font-size: 15px;
+    .path-card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
       font-weight: 700;
+      letter-spacing: -.015em;
     }
 
-    .testimonial-role {
-      display: block;
-      margin-top: 3px;
+    .path-card p {
       color: var(--muted);
-      font-size: 13.5px;
+      font-size: 14.8px;
     }
 
     /* CTA */
-    .cta-section {
-      padding: 0 0 96px;
-    }
-
     .cta-panel {
       position: relative;
       overflow: hidden;
@@ -358,19 +512,6 @@
       gap: 14px;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 54px;
-      padding: 0 28px;
-      border-radius: 999px;
-      font-size: 15px;
-      font-weight: 650;
-      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
-    }
-
     .btn-white {
       color: var(--navy);
       background: #fff;
@@ -390,6 +531,32 @@
     .btn-ghost:hover {
       background: rgba(255, 255, 255, .14);
       transform: translateY(-2px);
+    }
+
+    /* Disclaimer */
+    .disclaimer-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 0 0 92px;
+    }
+
+    .disclaimer-box {
+      max-width: 840px;
+      padding: 20px 26px;
+      border: 1px solid #FDE68A;
+      border-left: 4px solid #F59E0B;
+      border-radius: var(--radius-md);
+      background: #FFFBEB;
+      color: #92400E;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .disclaimer-box strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #92400E;
+      font-size: 14.5px;
     }
 
     /* Footer */
@@ -498,7 +665,8 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .testimonial-grid {
+      .tutorial-grid,
+      .path-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -538,11 +706,11 @@
       }
 
       .page-hero {
-        padding: 72px 0 68px;
+        padding: 78px 0 82px;
       }
 
-      .testimonials-section {
-        padding: 68px 0 72px;
+      .section {
+        padding: 70px 0;
       }
 
       .cta-panel {
@@ -565,10 +733,12 @@
         padding: 0 18px;
       }
 
-      .testimonial-grid {
+      .tutorial-grid,
+      .path-grid {
         grid-template-columns: 1fr;
       }
 
+      .hero-actions,
       .cta-actions {
         flex-direction: column;
         align-items: stretch;
@@ -576,6 +746,10 @@
 
       .btn {
         width: 100%;
+      }
+
+      .disclaimer-box {
+        padding: 18px;
       }
     }
   </style>
@@ -593,7 +767,7 @@
         <a href="software.html">Software</a>
         <a href="hardware.html">Hardware</a>
         <a href="products.html">Products</a>
-        <a href="testimonials.html" class="active" aria-current="page">Testimonials</a>
+        <a href="tutorials.html" class="active" aria-current="page">Tutorials</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -618,151 +792,227 @@
       <div class="container">
         <div class="page-hero-inner">
           <p class="eyebrow reveal">
-            User Feedback
+            Learning Resources
           </p>
 
-          <h1 class="reveal">What Users Say</h1>
+          <h1 class="reveal">
+            X2 Smartcard
+            <span>Tutorials & Guides</span>
+          </h1>
 
-          <p class="reveal">
-            Feedback from people using X2 Smartcard Allinone for smartcard authentication and card-management workflows.
+          <p class="lead reveal">
+            Explore practical tutorials and guides for using the X2 Smartcard Allinone platform, companion tools,
+            and supported smartcard-management workflows.
           </p>
-        </div>
-      </div>
-    </section>
 
-    <section class="testimonials-section">
-      <div class="container">
-        <div class="testimonial-grid">
-          <article class="testimonial-card reveal">
-            <img src="images/testimonial1.jpg" alt="Anonymous X2 Smartcard Allinone user" class="testimonial-avatar">
-
-            <div class="quote-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.5c0-1.84 1.49-3.33 3.33-3.33V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H15.5c0-1.84 1.49-3.33 3.33-3.33V6Z"/>
+          <div class="hero-actions reveal">
+            <a href="#tutorials" class="btn btn-primary">
+              Browse Tutorials
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7"/>
               </svg>
-            </div>
-
-            <p class="testimonial-text">
-              “I was blown away by the quality of the X2 Smartcard Allinone. It’s been a game-changer for my business.”
-            </p>
-
-            <div class="testimonial-footer">
-              <span class="testimonial-name">Anonymous User</span>
-              <span class="testimonial-role">X2 Smartcard Allinone User</span>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal">
-            <img src="images/testimonial2.jpg" alt="Anonymous X2 Smartcard Allinone user" class="testimonial-avatar">
-
-            <div class="quote-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.5c0-1.84 1.49-3.33 3.33-3.33V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H15.5c0-1.84 1.49-3.33 3.33-3.33V6Z"/>
-              </svg>
-            </div>
-
-            <p class="testimonial-text">
-              “I was skeptical at first, but the X2 Smartcard Allinone has exceeded my expectations. It’s been a pleasure to work with.”
-            </p>
-
-            <div class="testimonial-footer">
-              <span class="testimonial-name">Anonymous User</span>
-              <span class="testimonial-role">X2 Smartcard Allinone User</span>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal">
-            <img src="images/testimonial3.jpg" alt="Anonymous X2 Smartcard Allinone user" class="testimonial-avatar">
-
-            <div class="quote-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.5c0-1.84 1.49-3.33 3.33-3.33V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H15.5c0-1.84 1.49-3.33 3.33-3.33V6Z"/>
-              </svg>
-            </div>
-
-            <p class="testimonial-text">
-              “The X2 Smartcard Allinone has been a huge success for our company. We’ve seen a significant increase in productivity and efficiency.”
-            </p>
-
-            <div class="testimonial-footer">
-              <span class="testimonial-name">Anonymous User</span>
-              <span class="testimonial-role">X2 Smartcard Allinone User</span>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal">
-            <img src="images/testimonial4.jpg" alt="Anonymous X2 Smartcard Allinone user" class="testimonial-avatar">
-
-            <div class="quote-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.5c0-1.84 1.49-3.33 3.33-3.33V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H15.5c0-1.84 1.49-3.33 3.33-3.33V6Z"/>
-              </svg>
-            </div>
-
-            <p class="testimonial-text">
-              “I was impressed by the ease of use and setup of the X2 Smartcard Allinone. It’s been a great addition to our team.”
-            </p>
-
-            <div class="testimonial-footer">
-              <span class="testimonial-name">Anonymous User</span>
-              <span class="testimonial-role">X2 Smartcard Allinone User</span>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal">
-            <img src="images/testimonial5.jpg" alt="Anonymous X2 Smartcard Allinone user" class="testimonial-avatar">
-
-            <div class="quote-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.5c0-1.84 1.49-3.33 3.33-3.33V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H15.5c0-1.84 1.49-3.33 3.33-3.33V6Z"/>
-              </svg>
-            </div>
-
-            <p class="testimonial-text">
-              “The X2 Smartcard Allinone has been a cost-effective solution for our company. We’ve seen a significant reduction in costs and improved efficiency.”
-            </p>
-
-            <div class="testimonial-footer">
-              <span class="testimonial-name">Anonymous User</span>
-              <span class="testimonial-role">X2 Smartcard Allinone User</span>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal">
-            <img src="images/testimonial6.jpg" alt="Anonymous X2 Smartcard Allinone user" class="testimonial-avatar">
-
-            <div class="quote-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.5c0-1.84 1.49-3.33 3.33-3.33V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H15.5c0-1.84 1.49-3.33 3.33-3.33V6Z"/>
-              </svg>
-            </div>
-
-            <p class="testimonial-text">
-              “I was thrilled with the customer support provided by the X2 Smartcard Allinone team. They were always available to answer my questions and provide assistance.”
-            </p>
-
-            <div class="testimonial-footer">
-              <span class="testimonial-name">Anonymous User</span>
-              <span class="testimonial-role">X2 Smartcard Allinone User</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-panel reveal">
-          <h2>Explore X2 Smartcard Allinone</h2>
-          <p>Professional EMV software for smartcard authentication, ARQC generation, and multi-brand card management.</p>
-
-          <div class="cta-actions">
-            <a href="products.html" class="btn btn-white">View Products</a>
-            <a href="contact.html" class="btn btn-ghost">Contact Us</a>
+            </a>
+            <a href="contact.html" class="btn btn-outline">Request Support</a>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section section-accent" id="tutorials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Tutorials</span>
+          <h2>Guides for X2 Smartcard Allinone</h2>
+          <p>Follow structured tutorials covering software setup, smartcard workflows, companion tools, and troubleshooting.</p>
+        </div>
+
+        <div class="tutorial-grid">
+          <article class="tutorial-card reveal">
+            <div class="tutorial-media">
+              <span class="tutorial-tag">Getting Started</span>
+              <img src="images/x2-smartcard-allinone-uii.png" alt="X2 Smartcard Allinone software interface tutorial">
+            </div>
+
+            <div class="tutorial-body">
+              <h3>Getting Started with X2 Smartcard Allinone</h3>
+              <p>
+                Learn how to navigate the X2 Smartcard Allinone interface and understand the core areas of the
+                software environment.
+              </p>
+
+              <a href="contact.html" class="tutorial-link">
+                View Tutorial
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="tutorial-card reveal">
+            <div class="tutorial-media">
+              <span class="tutorial-tag">Software</span>
+              <img src="images/Screenshot 2026-08-21 014030.png" alt="X2 Smartcard Allinone software setup tutorial">
+            </div>
+
+            <div class="tutorial-body">
+              <h3>Software Setup & Companion Tools</h3>
+              <p>
+                Review the X2 Smartcard Allinone software package and companion tools, including ATR Tool,
+                CardPeek, JCOP Manager, and JCOP English.
+              </p>
+
+              <a href="software.html" class="tutorial-link">
+                View Tutorial
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="tutorial-card reveal">
+            <div class="tutorial-media">
+              <span class="tutorial-tag">Hardware</span>
+              <img src="images/hardware1.png" alt="Card reader hardware setup tutorial">
+            </div>
+
+            <div class="tutorial-body">
+              <h3>Reader & Hardware Setup</h3>
+              <p>
+                Learn how to connect and configure supported reader hardware for use with the X2 Smartcard
+                Allinone platform.
+              </p>
+
+              <a href="hardware.html" class="tutorial-link">
+                View Tutorial
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="tutorial-card reveal">
+            <div class="tutorial-media">
+              <span class="tutorial-tag">Card Management</span>
+              <img src="images/Screenshot From 2026-10-13 09-37-03.png" alt="Smartcard management tutorial">
+            </div>
+
+            <div class="tutorial-body">
+              <h3>Smartcard Management Basics</h3>
+              <p>
+                Explore the fundamentals of organised smartcard management and structured professional workflows.
+              </p>
+
+              <a href="software.html" class="tutorial-link">
+                View Tutorial
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="tutorial-card reveal">
+            <div class="tutorial-media">
+              <span class="tutorial-tag">Troubleshooting</span>
+              <img src="images/x2-smartcard-allinone-uii.png" alt="X2 Smartcard Allinone troubleshooting tutorial">
+            </div>
+
+            <div class="tutorial-body">
+              <h3>Common Setup Questions</h3>
+              <p>
+                Find answers to common setup, software, hardware, and workflow questions related to the
+                X2 Smartcard Allinone platform.
+              </p>
+
+              <a href="faq.html" class="tutorial-link">
+                View FAQ
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="tutorial-card reveal">
+            <div class="tutorial-media">
+              <span class="tutorial-tag">Support</span>
+              <img src="images/logo.png" alt="X2 Smartcard Allinone support tutorial">
+            </div>
+
+            <div class="tutorial-body">
+              <h3>Getting Help</h3>
+              <p>
+                Contact the X2 Smartcard Allinone team for assistance with software, hardware, packages, or
+                tutorial-related questions.
+              </p>
+
+              <a href="contact.html" class="tutorial-link">
+                Contact Support
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Learning Path</span>
+          <h2>Start with the essentials</h2>
+          <p>Follow a structured learning path to become familiar with the X2 Smartcard Allinone platform and its companion tools.</p>
+        </div>
+
+        <div class="path-grid">
+          <article class="path-card reveal">
+            <div class="path-number" aria-hidden="true">1</div>
+            <h3>Explore the Platform</h3>
+            <p>Review the X2 Smartcard Allinone interface, software overview, and available product options.</p>
+          </article>
+
+          <article class="path-card reveal">
+            <div class="path-number" aria-hidden="true">2</div>
+            <h3>Prepare Your Setup</h3>
+            <p>Review the software package and compatible reader hardware required for your workflow.</p>
+          </article>
+
+          <article class="path-card reveal">
+            <div class="path-number" aria-hidden="true">3</div>
+            <h3>Follow the Guides</h3>
+            <p>Use the tutorials, FAQ, and support resources to build confidence with the platform.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <h2>Need help with a tutorial?</h2>
+          <p>Contact the X2 Smartcard Allinone team for guidance on software, hardware, packages, and learning resources.</p>
+
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-white">Contact Us</a>
+            <a href="products.html" class="btn btn-ghost">View Products</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="disclaimer-wrap">
+      <div class="container">
+        <div class="disclaimer-box reveal">
+          <strong>Disclaimer</strong>
+          Tutorials and learning resources are intended for authorised professional and educational use only, in accordance with applicable local laws and card-network requirements.
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -781,7 +1031,7 @@
           <a href="software.html">Software</a>
           <a href="hardware.html">Hardware</a>
           <a href="products.html">Products</a>
-          <a href="testimonials.html">Testimonials</a>
+          <a href="tutorials.html">Tutorials</a>
           <a href="faq.html">FAQ</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
