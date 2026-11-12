@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function closeNav() {
     document.body.classList.remove("nav-open");
-    toggle.setAttribute("aria-expanded", "false");
     document.body.classList.remove("nav-lock");
+    toggle.setAttribute("aria-expanded", "false");
   }
 
   toggle.addEventListener("click", function () {
