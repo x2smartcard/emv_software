@@ -47,6 +47,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    body.nav-lock {
+      overflow: hidden;
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -691,7 +695,7 @@
         box-shadow: 0 20px 40px rgba(15, 23, 42, .1);
       }
 
-      .nav.open {
+      body.nav-open .nav {
         display: flex;
       }
 
@@ -783,7 +787,13 @@
         </svg>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -1037,14 +1047,6 @@
 
   <script src="js/main.js"></script>
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
     const revealElements = document.querySelectorAll('.reveal');
 
     if ('IntersectionObserver' in window) {
