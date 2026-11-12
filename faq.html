@@ -19,48 +19,227 @@
       --border: #E2E8F0;
       --radius: 12px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-    .header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
-    .logo img { height: 42px; }
-    .nav { display: flex; gap: 32px; }
-    .nav a { text-decoration: none; color: var(--text-secondary); font-weight: 500; font-size: 15px; }
-    .nav a:hover, .nav a.active { color: var(--accent); }
-    .menu-toggle { display: none; background: none; border: none; cursor: pointer; }
-    .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--primary); margin: 5px 0; }
-    .page-header { padding: 100px 0 60px; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); text-align: center; }
-    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
-    h1 { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
-    .lead { font-size: 18px; color: var(--text-secondary); max-width: 640px; margin: 0 auto; }
-    .section { padding: 40px 0 100px; }
-    .faq-list { display: flex; flex-direction: column; gap: 16px; }
-    .faq-item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; transition: box-shadow 0.2s; }
-    .faq-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-    .faq-question { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--primary); }
-    .faq-answer { color: var(--text-secondary); font-size: 15px; }
-    .footer { background: #0F172A; color: #94A3B8; padding: 56px 0 40px; }
-    .footer-inner { text-align: center; max-width: 1200px; margin: 0 auto; }
-    .footer-nav { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
-    .footer-nav a { color: #CBD5E1; text-decoration: none; font-size: 14px; }
-    .footer-nav a:hover { color: #fff; }
-    .footer-copy { font-size: 14px; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    body.nav-lock {
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--primary);
+      margin: 5px 0;
+    }
+
+    .page-header {
+      padding: 100px 0 60px;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 40px 0 100px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      transition: box-shadow 0.2s;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-question {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .faq-answer {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    .footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 56px 0 40px;
+    }
+
+    .footer-inner {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .footer-nav a {
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-nav a:hover {
+      color: #fff;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+    }
+
     @media (max-width: 768px) {
-      .nav { display: none; }
-      .menu-toggle { display: block; }
-      h1 { font-size: 36px; }
-      .faq-item { padding: 20px; }
+      .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 14px 24px 20px;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 20px 40px rgba(15, 23, 42, .1);
+      }
+
+      body.nav-open .nav {
+        display: flex;
+      }
+
+      .nav a {
+        padding: 13px 0;
+        font-size: 15px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .faq-item {
+        padding: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="X2 Smartcard Allinone">
       </a>
-      <nav class="nav" id="mainNav">
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="software.html">Software</a>
         <a href="hardware.html">Hardware</a>
@@ -69,13 +248,21 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
   </header>
+
   <section class="page-header">
     <div class="container">
       <p class="eyebrow">Support</p>
@@ -83,6 +270,7 @@
       <p class="lead">Clear answers about the X2 Smartcard Allinone software, hardware and support resources.</p>
     </div>
   </section>
+
   <section class="section">
     <div class="container">
       <div class="faq-list">
@@ -92,30 +280,35 @@
             It is the official 2026 EMV chip formatting and smartcard management suite for authorised professional, laboratory and educational use.
           </p>
         </div>
+
         <div class="faq-item">
           <h3 class="faq-question">Which companion tools are included with the additional software package?</h3>
           <p class="faq-answer">
             The companion package covers ATR Tool, JCOP English, JCOP Manager, MSRX, CardPeek and related IST files used alongside the main X2 application.
           </p>
         </div>
+
         <div class="faq-item">
           <h3 class="faq-question">What hardware is required?</h3>
           <p class="faq-answer">
             A typical laboratory setup uses an Omnikey smart card reader, a Deftun / MSRX magnetic reader-writer, and unfused JCOP blank cards.
           </p>
         </div>
+
         <div class="faq-item">
           <h3 class="faq-question">How are purchases completed?</h3>
           <p class="faq-answer">
             Product pages list current packages. Payment pages accept Bitcoin or Solana. After sending payment, submit the email form so access or shipping details can be arranged.
           </p>
         </div>
+
         <div class="faq-item">
           <h3 class="faq-question">How should the software be used?</h3>
           <p class="faq-answer">
             Use is restricted to authorised professional and educational environments and must follow the laws of the country in which it is operated.
           </p>
         </div>
+
         <div class="faq-item">
           <h3 class="faq-question">How can I get in touch?</h3>
           <p class="faq-answer">
@@ -125,10 +318,11 @@
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Footer navigation">
           <a href="index.html">Home</a>
           <a href="software.html">Software</a>
           <a href="hardware.html">Hardware</a>
@@ -138,10 +332,12 @@
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
+
         <p class="footer-copy">© 2026 X2 Smartcard Allinone. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
